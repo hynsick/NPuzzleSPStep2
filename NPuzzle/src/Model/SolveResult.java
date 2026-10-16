@@ -16,7 +16,7 @@ public class SolveResult {
         this.expandedNodes = expandedNodes;
         this.elapsedMs = elapsedMs;
     }
-
+    
     public Status getStatus() { return status; }
     public List<Node> getPath() { return path; }
 }
