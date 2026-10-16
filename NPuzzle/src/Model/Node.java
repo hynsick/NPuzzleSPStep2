@@ -1,6 +1,7 @@
 package Model;
 
 public class Node implements Comparable<Node> {
+	
     private int[][] state;
     private int g; // 시작점부터 현재까지 이동 횟수
     private int h; // 맨해튼 거리 휴리스틱 예상 비용
