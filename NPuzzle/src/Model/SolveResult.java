@@ -3,6 +3,7 @@ package Model;
 import java.util.List;
 
 public class SolveResult {
+	
     public enum Status { SOLVED, TIMEOUT, CANCELLED }
     
     private Status status;
