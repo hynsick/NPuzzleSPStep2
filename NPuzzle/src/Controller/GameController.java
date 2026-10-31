@@ -3,7 +3,7 @@ package Controller;
 import Model.AStar;
 import Model.BFS;
 import Model.Node;
-import Model.PuzzelBoard;
+import Model.PuzzleBoard;
 import Model.SolveResult;
 import View.ConsoleView;
 
@@ -22,7 +22,7 @@ public class GameController {
         while (restart) {
             int size = readBoardSize();
 
-            PuzzelBoard board = new PuzzelBoard(size);
+            PuzzleBoard board = new PuzzleBoard(size);
             board.shuffleBoard();
 
             playGame(board);
@@ -58,7 +58,7 @@ public class GameController {
     }
 
 // 한 판의 게임 진행(사용자 입력에 따라 타일 이동, 퍼즐 재배치, 게임 포기 등을 처리)
-private void playGame(PuzzelBoard board) {
+private void playGame(PuzzleBoard board) {
     while (true) {
         view.printBoard(board.getBoard());
 
@@ -101,7 +101,7 @@ private void playGame(PuzzelBoard board) {
 
 
 // 선택한 타일이 빈칸과 인접한지 확인하고 이동을 처리
-private void moveTileByNumber(PuzzelBoard board, int target) {
+private void moveTileByNumber(PuzzleBoard board, int target) {
 
     int[][] state = board.getBoard();
     int size = state.length;
@@ -147,7 +147,7 @@ private void moveTileByNumber(PuzzelBoard board, int target) {
 }
 
 // 포기 및 자동 풀이 처리
-private void handleGiveUp(PuzzelBoard board) {
+private void handleGiveUp(PuzzleBoard board) {
 
     int[][] currentState = board.getBoard();
     int size = currentState.length;

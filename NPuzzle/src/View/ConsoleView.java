@@ -1,4 +1,3 @@
-
 package View;
 //콘솔 화면 출력과 사용자 안내를 담당하는 클래스
 public class ConsoleView {
